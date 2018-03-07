@@ -1,5 +1,5 @@
 {
-  "name": "Flicks",
+  "name": "@kinokabaret/Flicks",
   "version": "1.0.0",
   "description": "A simple node module to calculate flicks for video and audio pipelines with some helpful sanity checks.",
   "main": "index.js",
@@ -74,5 +74,10 @@
     "jsdoc-oblivion": "0.0.9",
     "mocha": "^5.0.1",
     "tui-jsdoc-template": "^1.2.2"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {}
 }

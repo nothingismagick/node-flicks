@@ -1,5 +1,7 @@
 ![hipster-logo](./img/flicks_logo_large.png)
 
+[![Build Status](https://travis-ci.org/nothingismagick/Flicks.svg?branch=master)](https://travis-ci.org/nothingismagick/Flicks)
+[![Coverage Status](https://coveralls.io/repos/github/nothingismagick/node-flicks/badge.svg?branch=master)](https://coveralls.io/github/nothingismagick/node-flicks?branch=master)
 
 
 
