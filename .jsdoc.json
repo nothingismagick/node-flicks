@@ -1,0 +1,42 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "source": {
+    "include": ["index.js", "package.json", "README.md"]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "systemName"            : "Flicks",
+    "systemSummary"         : "ES6 Module for working with Flicks in node.js and commonjs",
+    "systemLogo"            : "./img/flicks_logo_40x.png",
+    "systemColor"           : "#988776",
+    "footer"                : "",
+    "copyright"             : "Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson",
+    "includeDate"           : false,
+    "dateFormat"            : "MMM Do YYYY",
+    "inlineNav"             : "{boolean}",
+    "inverseNav"            : true,
+    "linenums"              : true,
+    "showTableOfContents"   : true,
+    "showAccessFilter"      : true,
+    "collapseSymbols"       : false,
+    "methodHeadingReturns"  : true,
+    "outputSourceFiles"     : true,
+    "sort"                  : "linenum",
+    "search"                : false,
+    "favicon"               : false,
+    "stylesheets"           : false,
+    "scripts"               : false
+  },
+  "opts": {
+    "destination": "./docs/",
+    "encoding": "utf8",
+    "private": true,
+    "recurse": true,
+    "template": "node_modules/foodoc/template"
+  }
+}

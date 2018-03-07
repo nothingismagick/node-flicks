@@ -1,0 +1,154 @@
+<!-- start:readme.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Flicks</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #988776;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #988776;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #988776;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #988776;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMM Do YYYY","systemName":"Flicks","systemSummary":"ES6 Module for working with Flicks in node.js and commonjs","systemLogo":"img/flicks_logo_40x.png","systemColor":"#988776","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":"{boolean}","outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum","search":false,"favicon":false,"stylesheets":false,"scripts":false,"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/flicks_logo_40x.png);">
+					Flicks
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li><a href="list_module.html">Modules</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">readme</span>
+				<h1><span class="name">Flicks</span></h1>
+				<div class="summary"><p>ES6 Module for working with Flicks in node.js and commonjs</p></div>			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+		<section class="readme-section">
+			<article><p><img src="./img/flicks_logo_large.png" alt="hipster-logo"></p>
+<p>Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a &quot;Flick&quot; ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of <code>[ww:dd:hh:mm:ss.ff(ffff)]</code> or as JSON-type object with these values as NUMBERS.</p>
+<p>It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches.</p>
+<p>Please visit <a href="https://github.com/OculusVR/Flicks">OculusVR/flicks</a> and give them a star. That little lib is the original C++ version you'll want for high-performance applications. We are mostly concerned with the userland application of Flicks here - especially helping the user decide upon a mixture of fps, Hz and BPM.</p>
+<h2>Quick-Start</h2><p>We have provided you with a file: <code>quickstart.js</code> that you can use without installing anything. After you have cloned (or forked this repo) to your local machine, just type: </p>
+<pre class="prettyprint source"><code>node quickstart.js</code></pre><p>It will run a couple of examples of interesting applications of this code and output them to console.log()</p>
+<p>##Design </p>
+<p>We have chosen to expose a lookup table as an object that holds all of the most common values for frequencies that you would like to measure in Flicks. It is available at <code>Flicks._LU</code> - but as with the following <code>Flicks._SI</code> object, it is primarily meant to be used internally. You can still perform a lookup with either <code>Flicks._LU[30]</code> or <code>Flicks._LU['30']</code> for example, which will hold the value of 23520000. All of the evenly divisible frequencies up to 25 are included here - and if you like you can have the whole object with <code>Flicks._LU</code>.</p>
+<p>We have furthermore extended the original idea of Flicks to shorten Flicks when displayed - because the number of Flicks gets really big and no one likes to see a number like 2352000000000000000000 (which as a quantity of time measured in Flicks is 317097.92 years of video - or rather a little bit longer than the length of time it would take to watch all of the videos on Youtube) and 2.352 zetta-Flicks (or ≈2.3 zF) just seems like a logical and concise way to do it. Furthermore, using this notation when talking about Flicks instead of Frames is a visual reminder to the user that FPS and f/s are not the same as kF/s or kFPS. To this end we are exposing another internal object with these names and abbreviations. It is available at <code>Flicks._SI</code></p>
+<p>On a side note, 2.352e21 Flicks makes as much sense as 2.352 zF - and from a technical point of view it is indeed faster to pass a number than a string that has to be parsed. This approach will always work in the code, but for many non-technical end-users that invocation of scientific notation will look strange.</p>
+<p>As a matter of procedure (and keeping in step with the original spec), we count frames as ticks. We make the assumption that these ticks have an exact, immutable length that is its frequency. Frequency is commonly counted in video as frames per second (fps), in music as beats per minute (BPM) and audio recordings are commonly made using some number of cycles per second or Hertz (Hz). We capitalize the word &quot;Flicks&quot; and abbreviate it with &quot;F&quot;, and speak of FlickTicks &quot;FT&quot; when we are counting them instead of referring to them as mere ratios.</p>
+<h2>Background</h2><p>A Flick (frame-tick) is a very small unit of time. It is 1/705600000 of a second, exactly.</p>
+<p><code>1 Flick = 1/705600000 second</code></p>
+<p>This unit of time is the smallest time unit which is LARGER than a nanosecond, and can in integer quantities exactly represent a single frame duration for 24 Hz, 25 Hz, 30 Hz, 48 Hz, 50 Hz, 60 Hz, 90 Hz, 100 Hz, 120 Hz, and also 1/1000 divisions of each, as well as a single sample duration for 8 kHz, 16 kHz, 22.05 kHz, 24 kHz, 32 kHz, 44.1 kHz, 48 kHz, 88.2 kHz, 96 kHz, and 192kHz, as well as the NTSC frame durations for 24 <em> (1000/1001) Hz, 30 </em> (1000/1001) Hz, 60 <em> (1000/1001) Hz, and 120 </em> (1000/1001) Hz.</p>
+<p>Flicks also support some common audio sample rates as well. This list is not exhaustive, but covers the majority of digital audio formats. They are 8kHz, 16kHz, 22.05kHz, 24kHz, 32kHz, 44.1kHz, 48kHz, 88.2kHz, 96kHz, and 192kHz.</p>
+<p>NTSC IS NOT EXPLICITLY SUPPORTED IN ALL OF ITS SUBTLE NUANCES, BUT: The NTSC variations (~23.976, ~29.97, etc) are approximately defined as 24 <em> 1000/1001 and 30 </em> 1000/1001, etc. These can be represented exactly in Flicks, but 1/1000 divisions are not available.</p>
+<h2>Details</h2><p>Here are some of the frequencies and their values.</p>
+<pre class="prettyprint source"><code>- 24    fps frame: 29400000 Flicks / 29.400 mF
+- 25    fps frame: 28224000 Flicks / 28.224 mF
+- 30    fps frame: 23520000 Flicks / 23.520 mF
+- 48    fps frame: 14700000 Flicks / 14.700 mF
+- 50    fps frame: 14112000 Flicks / 14.112 mF
+- 60    fps frame: 11760000 Flicks / 11.760 mF
+- 90    fps frame: 7840000 Flicks  / 7.840 mF
+- 100   fps frame: 7056000 Flicks  / 7.056 mF
+- 120   fps frame: 5880000 Flicks  / 5.880 mF
+- 144    hz frame: 4900000 Flicks  / 4.90 mF   
+- 8000   hz frame: 88200 Flicks    / 88.2 kF
+- 16000  hz frame: 44100 Flicks    / 44.1 kF
+- 22050  hz frame: 32000 Flicks    / 32.0 kF
+- 24000  hz frame: 29400 Flicks    / 29.4 kF
+- 32000  hz frame: 22050 Flicks    / 22.05 kF
+- 44100  hz frame: 16000 Flicks    / 16.0 kF
+- 48000  hz frame: 14700 Flicks    / 14.7 kF
+- 88200  hz frame: 8000 Flicks     / 8.0 kF
+- 96000  hz frame: 7350 Flicks     / 7.35 kF
+- 192000 hz frame: 3675 Flicks     / 3.675 kF</code></pre><h2>Installation &amp; Usage</h2><p>If you want to use it in a node project, you would:</p>
+<pre class="prettyprint source"><code>yarn add flicks</code></pre><p>Or if you are still using npm:</p>
+<pre class="prettyprint source"><code>npm install flicks --save</code></pre><p>This is an example of how you would require the module in your node.js project.</p>
+<pre class="prettyprint source"><code>let Flicks = require('Flicks')
+
+console.log(Flicks._per_second)</code></pre><p>This will return the number <code>705600000</code> </p>
+<p>You should always use the try / catch approach for this kind of math, because we are pretty aggressive about catching errors early and will throw down at the drop of a hat. ;) </p>
+<h2>Docs</h2><p>We created the docs with the über-awesome <a href="http://usejsdoc.org/">JSdoc3</a> and using the <a href="https://github.com/steveush/foodoc">foodoc template</a>. You can see them <a href="https://nothingismagick.github.io/node-flicks">here</a></p>
+<h2>What the FAQ?</h2><p>Very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.</p>
+<h2>32-bit</h2><p>Using this with 32bit? We are interested in hearing from you about how you are using this module - and especially if you are <strong>NOT</strong> having problems on 32-bit x86 or ARM platforms.</p>
+<h2>Tests</h2><p>To run the test battery (at the time of this writing there are 25 tests) you can simply use: <code>npm test</code></p>
+<p>We are using eslint to pretest our linting and mocha for the actual tests. If you have found an edge case that we didn't detect, please write a test for it, fix the problem and make a pull-request. Thankyou!</p>
+<h2>Semver</h2><p>We solemnly swear never to change the inputs and outputs of existing functions - i.e. there will never be a version two of this module. If we need something different, we'll write a new module.</p>
+<h2>Contributing</h2><p>We consider this module to be complete for our purposes. As stated above, we will not change the inputs or outputs of existing functions. If there is a way to internally improve the functions without changing the API, then it <em>might</em> be considered. If you really have a need to fix something, then please - fork away. </p>
+<h2>Acknowledgements</h2><p>This time unit began as a technical question posted publicly on Facebook by Christopher Horvath in late 2016. Many people contributed and refined the unit, including Dan Goldman, Pascal Pincosy, Simon Eves, Kearsley Higgins, Francisco De La Torre, Benjy Feen, Eric Landreneau and Sebastian Sylwan, among others. <a href="https://www.facebook.com/christopher.horvath.395/posts/1157292757692660">Here's the post!</a></p>
+<p>Some of this readme is taken from the original repository: https://github.com/OculusVR/Flicks</p>
+<h2>License</h2><p>All original code here can be used in accordance with the MIT license. Readme and Docs: CC-BY</p>
+<p>Proudly sponsored by the <a href="http://kinokabaret.com">KINOÏT Platform</a></p></article>
+		</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+	
+</body>
+</html>
+<!-- end:readme.hbs -->
