@@ -97,7 +97,7 @@ You should always use the try / catch approach for this kind of math, because we
 
 ## Docs
 
-We created the docs with the über-awesome [JSdoc3](http://usejsdoc.org/) and using the [foodoc template](https://github.com/steveush/foodoc). You can see them [here](https://nothingismagick.github.io/node-flicks)
+We created the docs with the über-awesome [JSdoc3](http://usejsdoc.org/) and using the [foodoc template](https://github.com/steveush/foodoc). You can see them [here](https://nothingismagick.github.io/Flicks)
 
 ## What the FAQ?
 
