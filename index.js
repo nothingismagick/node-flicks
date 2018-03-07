@@ -193,7 +193,7 @@ let Flicks = exports.Flicks = {
         }
     },
     /**
-     * Returns the number of Flicks according to ticks and frequency
+     * Returns the number of Flicks according to ticks and frequency.
      * @alias module:Flicks.computed_length
      * @param {number} ticks - total number of ticks
      * @param {number} frequency - the cyclic ratio as a whole number e.g. 30
