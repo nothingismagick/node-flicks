@@ -1,5 +1,5 @@
 {
-  "name": "@kinokabaret/Flicks",
+  "name": "@kinokabaret/flicks",
   "version": "1.0.0",
   "description": "A simple node module to calculate flicks for video and audio pipelines with some helpful sanity checks.",
   "main": "index.js",

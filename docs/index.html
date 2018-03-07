@@ -79,6 +79,8 @@
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
 			<article><p><img src="./img/flicks_logo_large.png" alt="hipster-logo"></p>
+<p><a href="https://travis-ci.org/nothingismagick/Flicks"><img src="https://travis-ci.org/nothingismagick/Flicks.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/nothingismagick/node-flicks?branch=master"><img src="https://coveralls.io/repos/github/nothingismagick/node-flicks/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <p>Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a &quot;Flick&quot; ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of <code>[ww:dd:hh:mm:ss.ff(ffff)]</code> or as JSON-type object with these values as NUMBERS.</p>
 <p>It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches.</p>
 <p>Please visit <a href="https://github.com/OculusVR/Flicks">OculusVR/flicks</a> and give them a star. That little lib is the original C++ version you'll want for high-performance applications. We are mostly concerned with the userland application of Flicks here - especially helping the user decide upon a mixture of fps, Hz and BPM.</p>
@@ -121,7 +123,7 @@
 
 console.log(Flicks._per_second)</code></pre><p>This will return the number <code>705600000</code> </p>
 <p>You should always use the try / catch approach for this kind of math, because we are pretty aggressive about catching errors early and will throw down at the drop of a hat. ;) </p>
-<h2>Docs</h2><p>We created the docs with the über-awesome <a href="http://usejsdoc.org/">JSdoc3</a> and using the <a href="https://github.com/steveush/foodoc">foodoc template</a>. You can see them <a href="https://nothingismagick.github.io/node-flicks">here</a></p>
+<h2>Docs</h2><p>We created the docs with the über-awesome <a href="http://usejsdoc.org/">JSdoc3</a> and using the <a href="https://github.com/steveush/foodoc">foodoc template</a>. You can see them <a href="https://nothingismagick.github.io/Flicks">here</a>.</p>
 <h2>What the FAQ?</h2><p>Very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.</p>
 <h2>32-bit</h2><p>Using this with 32bit? We are interested in hearing from you about how you are using this module - and especially if you are <strong>NOT</strong> having problems on 32-bit x86 or ARM platforms.</p>
 <h2>Tests</h2><p>To run the test battery (at the time of this writing there are 25 tests) you can simply use: <code>npm test</code></p>
