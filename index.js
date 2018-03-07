@@ -4,6 +4,10 @@
  * @exports Flicks
  */
 
+/**
+ * These are the exported
+ * @type {{}}
+ */
 module.exports = {}
 let Flicks = exports.Flicks = {
     /**

@@ -15,7 +15,7 @@
     "systemLogo"            : "./img/flicks_logo_40x.png",
     "systemColor"           : "#988776",
     "footer"                : "",
-    "copyright"             : "Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson",
+    "copyright"             : "Flicks v1.0.1 - Copyright © 2018 - D.C. Thompson",
     "includeDate"           : false,
     "dateFormat"            : "MMM Do YYYY",
     "inlineNav"             : "{boolean}",

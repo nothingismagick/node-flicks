@@ -1,6 +1,6 @@
 ![hipster-logo](./img/flicks_logo_large.png)
 
-[![Build Status](https://travis-ci.org/nothingismagick/Flicks.svg?branch=master)](https://travis-ci.org/nothingismagick/Flicks)
+[![Build Status](https://travis-ci.org/nothingismagick/node-flicks.svg?branch=master)](https://travis-ci.org/nothingismagick/Flicks)
 [![Coverage Status](https://coveralls.io/repos/github/nothingismagick/node-flicks/badge.svg?branch=master)](https://coveralls.io/github/nothingismagick/node-flicks?branch=master)
 
 
@@ -99,11 +99,11 @@ You should always use the try / catch approach for this kind of math, because we
 
 ## Docs
 
-We created the docs with the über-awesome [JSdoc3](http://usejsdoc.org/) and using the [foodoc template](https://github.com/steveush/foodoc). You can see them [here](https://nothingismagick.github.io/Flicks).
+We created the docs with the über-awesome [JSdoc3](http://usejsdoc.org/) and using the [foodoc template](https://github.com/steveush/foodoc). You can see them [here](https://nothingismagick.github.io/node-flicks).
 
 ## What the FAQ?
 
-Very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.
+You have a problem? We hate problems and are very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.
 
 ## 32-bit
 

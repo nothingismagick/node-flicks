@@ -1,6 +1,6 @@
 {
   "name": "@kinokabaret/flicks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple node module to calculate flicks for video and audio pipelines with some helpful sanity checks.",
   "main": "index.js",
   "eslintConfig": {
@@ -60,9 +60,9 @@
   "author": "nothingismagick <daniel@kinokabaret.com> (https://kinokabaret.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nothingismagick/Flicks/issues"
+    "url": "https://github.com/nothingismagick/node-flicks/issues"
   },
-  "homepage": "https://nothingismagick.github.io/Flicks/",
+  "homepage": "https://nothingismagick.github.io/node-flicks/",
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "chai": "^4.1.2",

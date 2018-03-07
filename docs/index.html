@@ -41,7 +41,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMM Do YYYY","systemName":"Flicks","systemSummary":"ES6 Module for working with Flicks in node.js and commonjs","systemLogo":"img/flicks_logo_40x.png","systemColor":"#988776","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":"{boolean}","outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum","search":false,"favicon":false,"stylesheets":false,"scripts":false,"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"MMM Do YYYY","systemName":"Flicks","systemSummary":"ES6 Module for working with Flicks in node.js and commonjs","systemLogo":"img/flicks_logo_40x.png","systemColor":"#988776","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Flicks v1.0.1 - Copyright © 2018 - D.C. Thompson","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":"{boolean}","outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum","search":false,"favicon":false,"stylesheets":false,"scripts":false,"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -79,7 +79,7 @@
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
 			<article><p><img src="./img/flicks_logo_large.png" alt="hipster-logo"></p>
-<p><a href="https://travis-ci.org/nothingismagick/Flicks"><img src="https://travis-ci.org/nothingismagick/Flicks.svg?branch=master" alt="Build Status"></a>
+<p><a href="https://travis-ci.org/nothingismagick/Flicks"><img src="https://travis-ci.org/nothingismagick/node-flicks.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/nothingismagick/node-flicks?branch=master"><img src="https://coveralls.io/repos/github/nothingismagick/node-flicks/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <p>Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a &quot;Flick&quot; ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of <code>[ww:dd:hh:mm:ss.ff(ffff)]</code> or as JSON-type object with these values as NUMBERS.</p>
 <p>It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches.</p>
@@ -123,8 +123,8 @@
 
 console.log(Flicks._per_second)</code></pre><p>This will return the number <code>705600000</code> </p>
 <p>You should always use the try / catch approach for this kind of math, because we are pretty aggressive about catching errors early and will throw down at the drop of a hat. ;) </p>
-<h2>Docs</h2><p>We created the docs with the über-awesome <a href="http://usejsdoc.org/">JSdoc3</a> and using the <a href="https://github.com/steveush/foodoc">foodoc template</a>. You can see them <a href="https://nothingismagick.github.io/Flicks">here</a>.</p>
-<h2>What the FAQ?</h2><p>Very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.</p>
+<h2>Docs</h2><p>We created the docs with the über-awesome <a href="http://usejsdoc.org/">JSdoc3</a> and using the <a href="https://github.com/steveush/foodoc">foodoc template</a>. You can see them <a href="https://nothingismagick.github.io/node-flicks">here</a>.</p>
+<h2>What the FAQ?</h2><p>You have a problem? We hate problems and are very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.</p>
 <h2>32-bit</h2><p>Using this with 32bit? We are interested in hearing from you about how you are using this module - and especially if you are <strong>NOT</strong> having problems on 32-bit x86 or ARM platforms.</p>
 <h2>Tests</h2><p>To run the test battery (at the time of this writing there are 25 tests) you can simply use: <code>npm test</code></p>
 <p>We are using eslint to pretest our linting and mocha for the actual tests. If you have found an edge case that we didn't detect, please write a test for it, fix the problem and make a pull-request. Thankyou!</p>
@@ -142,7 +142,7 @@ console.log(Flicks._per_second)</code></pre><p>This will return the number <code
 		</div>
 	</div>
 	<footer>
-				<div class="copyright">Flicks v1.0.0 - Copyright © 2018 - D.C. Thompson</div>
+				<div class="copyright">Flicks v1.0.1 - Copyright © 2018 - D.C. Thompson</div>
 			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
