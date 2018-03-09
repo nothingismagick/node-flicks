@@ -1,11 +1,11 @@
-![hipster-logo](./img/flicks_logo_large.png)
+<p align="center"><img src="https://github.com/nothingismagick/node-flicks/raw/master/img/flicks_logo_large.png" /></p>
 
 [![Build Status](https://travis-ci.org/nothingismagick/node-flicks.svg?branch=master)](https://travis-ci.org/nothingismagick/Flicks)
-[![Coverage Status](https://coveralls.io/repos/github/nothingismagick/node-flicks/badge.svg?branch=master)](https://coveralls.io/github/nothingismagick/node-flicks?branch=master)
+[![codecov](https://codecov.io/gh/nothingismagick/node-flicks/branch/master/graph/badge.svg)](https://codecov.io/gh/nothingismagick/node-flicks)
+[![codecov](https://david-dm.org/nothingismagick/node-flicks.svg)](https://david-dm.org/nothingismagick/node-flicks.svg)
 
 
-
-Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a "Flick" ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of `[ww:dd:hh:mm:ss.ff(ffff)]` or as JSON-type object with these values as NUMBERS.
+Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a "Flick" ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of `[hh:mm:ss.ff(ffff)]` or as JSON-type object with these values as NUMBERS.
 
 It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches.
 

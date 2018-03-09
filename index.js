@@ -267,7 +267,12 @@ if (typeof exports !== 'undefined') {
         exports = module.exports = Flicks
     }
     exports.Flicks = Flicks
-} else {
+}
+/*
+
+// trying to get coverage up.
+
+else {
     root.Flicks = Flicks
 }
 if (typeof define === 'function' && define.amd) {
@@ -275,3 +280,4 @@ if (typeof define === 'function' && define.amd) {
         return Flicks
     })
 }
+*/
