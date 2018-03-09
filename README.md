@@ -16,13 +16,13 @@ Please visit [OculusVR/flicks](https://github.com/OculusVR/Flicks) and give them
 We have provided you with a file: `quickstart.js` that you can use without installing anything. After you have cloned (or forked this repo) to your local machine, just type: 
 
 ```
-node quickstart.js
+$ node quickstart.js
 ```
 
 It will run a couple of examples of interesting applications of this code and output them to console.log()
 
 
-##Design 
+## Design
 
 We have chosen to expose a lookup table as an object that holds all of the most common values for frequencies that you would like to measure in Flicks. It is available at `Flicks._LU` - but as with the following `Flicks._SI` object, it is primarily meant to be used internally. You can still perform a lookup with either `Flicks._LU[30]` or `Flicks._LU['30']` for example, which will hold the value of 23520000. All of the evenly divisible frequencies up to 25 are included here - and if you like you can have the whole object with `Flicks._LU`.
 
@@ -79,16 +79,17 @@ Here are some of the frequencies and their values.
 If you want to use it in a node project, you would:
 
 ```
-yarn add flicks
+$ yarn add flicks
 ```
 Or if you are still using npm:
 
 ```
-npm install flicks --save
+$ npm install flicks --save
 ```
 
 This is an example of how you would require the module in your node.js project.
 ```
+#!/bin/env node
 let Flicks = require('Flicks')
 
 console.log(Flicks._per_second)
@@ -103,7 +104,7 @@ We created the docs with the über-awesome [JSdoc3](http://usejsdoc.org/) and us
 
 ## What the FAQ?
 
-You have a problem? We hate problems and are very sorry to hear that, but it is one of those things that you have to figure out a use for. If you have found a bug, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.
+You have a problem? We hate problems and are very sorry to hear that, but this package is one of those things that you have to figure out a use for. If you have found a bug, however, please report it clearly in Issues - along with OS, Node version and anything descriptive of what you were doing. Unfortunately, we cannot support you in implementation. This is free software, not free support.
 
 ## 32-bit
 

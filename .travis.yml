@@ -1,4 +1,5 @@
-language: node_js
+language:
+  node_js
 
 node_js:
   - stable
@@ -8,6 +9,6 @@ install:
 
 script:
   - npm run cover
-
+  - codecov
 # Send coverage data to Coveralls
 after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
