@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/nothingismagick/node-flicks.svg?branch=master)](https://travis-ci.org/nothingismagick/Flicks)
 [![codecov](https://codecov.io/gh/nothingismagick/node-flicks/branch/master/graph/badge.svg)](https://codecov.io/gh/nothingismagick/node-flicks)
 [![codecov](https://david-dm.org/nothingismagick/node-flicks.svg)](https://david-dm.org/nothingismagick/node-flicks.svg)
+[![CLA assistant](https://cla-assistant.io/readme/badge/nothingismagick/node-flicks)](https://cla-assistant.io/nothingismagick/node-flicks)
 
+Flicks is a compact, straightforward, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a "Flick" ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of `[hh:mm:ss.ff(ffff)]` or as JSON-type object with these values as NUMBERS.
 
-Flicks is a compact, straightforward, stand-alone, test-driven and eslinted ES6 compatible node module created for doing useful calculations with Flicks for media production pipelines, such as checking to see if a point in time can be referenced within a "Flick" ratio boundary, counting with Flicks and even helping with advanced syncing problems in browser playback. Given a frequency and a number of Flicks, it will even render out a time code in the short form of `[hh:mm:ss.ff(ffff)]` or as JSON-type object with these values as NUMBERS.
-
-It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches.
+It should work in node just as it should work in the browser, as the Flicks object is exposed with both node.js and commonjs export approaches. The only dependency is math.js - because there are really times when it is very important that, for example ` 0.1 + 0.2 === 0.3` - and we don't want to have to find those ugly edges when ES7 hits the shelves.
 
 Please visit [OculusVR/flicks](https://github.com/OculusVR/Flicks) and give them a star. That little lib is the original C++ version you'll want for high-performance applications. We are mostly concerned with the userland application of Flicks here - especially helping the user decide upon a mixture of fps, Hz and BPM.
 
@@ -28,8 +28,9 @@ We have chosen to expose a lookup table as an object that holds all of the most 
 
 We have furthermore extended the original idea of Flicks to shorten Flicks when displayed - because the number of Flicks gets really big and no one likes to see a number like 2352000000000000000000 (which as a quantity of time measured in Flicks is 317097.92 years of video - or rather a little bit longer than the length of time it would take to watch all of the videos on Youtube) and 2.352 zetta-Flicks (or ≈2.3 zF) just seems like a logical and concise way to do it. Furthermore, using this notation when talking about Flicks instead of Frames is a visual reminder to the user that FPS and f/s are not the same as kF/s or kFPS. To this end we are exposing another internal object with these names and abbreviations. It is available at `Flicks._SI`
 
-
 On a side note, 2.352e21 Flicks makes as much sense as 2.352 zF - and from a technical point of view it is indeed faster to pass a number than a string that has to be parsed. This approach will always work in the code, but for many non-technical end-users that invocation of scientific notation will look strange.
+
+On the other side of the coin, javascript has well-known problems with math - and also with very big numbers. This is why we always pass the numbers into Flicks as string types, not number-types. We convert the string to a number with math.js - work with it - and return it as a string again.
 
 As a matter of procedure (and keeping in step with the original spec), we count frames as ticks. We make the assumption that these ticks have an exact, immutable length that is its frequency. Frequency is commonly counted in video as frames per second (fps), in music as beats per minute (BPM) and audio recordings are commonly made using some number of cycles per second or Hertz (Hz). We capitalize the word "Flicks" and abbreviate it with "F", and speak of FlickTicks "FT" when we are counting them instead of referring to them as mere ratios.
 
